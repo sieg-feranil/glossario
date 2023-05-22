@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 function SearchBar() {
     const [find, setFind] = useState('')
     const [prods, setAllProds] = useState('')
-    useEffect(() => {
-        async function fetch() {
-          let res = await fetch(`https://dummyjson.com/products?limit=5&skip=0&search?q=${find}`);
-          let json = await res.json();
-          setAllProds(json.products);
-        }
-    if(find.length>3)fetch();
-      }, [find]);
+    // useEffect(() => {
+    //     async function fetch() {
+    //       let res = await fetch(`https://dummyjson.com/products?limit=5&skip=0&search?q=${find}`);
+    //       let json = await res.json();
+    //       setAllProds(json.products);
+    //     }
+    // if(find.length>3)fetch();
+    //   }, [find]);
     console.log(prods);
     return (
         <div className="search">
